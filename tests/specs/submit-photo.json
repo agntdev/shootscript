@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Submit photo",
+    "steps": [
+      {
+        "expect": [
+          {
+            "method": "sendMessage",
+            "payload": {
+              "text": "Send a model or location photo for analysis"
+            }
+          }
+        ],
+        "send": {
+          "callback": "menu:submit-photo"
+        }
+      }
+    ]
+  }
+]
