@@ -7,7 +7,7 @@
           {
             "method": "sendMessage",
             "payload": {
-              "text": "Clear current session and start fresh"
+              "text": "Your pending photo has been cleared. Send a new photo when you’re ready."
             }
           }
         ],

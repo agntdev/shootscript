@@ -7,7 +7,7 @@
         "expect": [
           {
             "method": "sendMessage",
-            "payload": { "text": "👋 Welcome! Tap a button below to get started." }
+            "payload": { "text": "Build a practical styling plan for your next shoot.\n\nSend one clear model or location photo, then add a context tag if it helps." }
           }
         ]
       }

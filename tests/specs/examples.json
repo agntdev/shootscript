@@ -7,13 +7,22 @@
           {
             "method": "sendMessage",
             "payload": {
-              "text": "Show example photos and expected outputs"
+              "text": "Example: a sunlit city portrait with the tag “editorial streetwear.”\n\nYou’ll get a restrained palette, wardrobe direction, hair and makeup notes, a lighting setup, pose cues, camera angles, a shot list, a 45-minute timeline, and caption hooks."
             }
           }
         ],
         "send": {
           "text": "/examples"
         }
+      }
+    ]
+  },
+  {
+    "name": "Examples menu button opens the example guidance",
+    "steps": [
+      {
+        "send": { "callback": "menu:examples" },
+        "expect": [{ "method": "editMessageText", "payload": { "text": "Example: a sunlit city portrait with the tag “editorial streetwear.”\n\nYou’ll get a restrained palette, wardrobe direction, hair and makeup notes, a lighting setup, pose cues, camera angles, a shot list, a 45-minute timeline, and caption hooks." } }]
       }
     ]
   }
