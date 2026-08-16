@@ -1,6 +1,6 @@
 import { Composer } from "grammy";
 import type { Ctx } from "../bot.js";
-import { inlineButton, inlineKeyboard } from "../toolkit/index.js";
+import { inlineButton, inlineKeyboard, registerMainMenuItem } from "../toolkit/index.js";
 
 // /help — plain-language explanation for non-technical users. This bot is
 // button-driven: tell the user to tap /start to open the menu rather than listing
@@ -9,8 +9,12 @@ import { inlineButton, inlineKeyboard } from "../toolkit/index.js";
 const composer = new Composer<Ctx>();
 
 const HELP =
-  "ℹ️ Tap /start to open the menu, then pick what you want from the buttons.\n\n" +
-  "Everything in this bot is reachable by tapping — you don't need to remember any commands.";
+  "Send one clear model or location photo.\n" +
+  "Add an optional tag such as editorial, bridal, street, studio, or the city.\n" +
+  "You’ll receive a shoot-ready styling plan with lighting, poses, angles, and a shot list.\n\n" +
+  "Use Reset if you want to discard a pending photo.";
+
+registerMainMenuItem({ label: "View help", data: "menu:help", order: 40 });
 
 const backToMenu = inlineKeyboard([[inlineButton("⬅️ Back to menu", "menu:main")]]);
 
